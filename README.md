@@ -34,3 +34,5 @@ pub struct InstantiateMsg {
 }
 ```
 Now, the factory contract is ready to be used!
+
+
