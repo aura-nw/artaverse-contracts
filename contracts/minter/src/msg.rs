@@ -22,10 +22,8 @@ pub struct InstantiateMsg {
     pub name: String,
     /// symbol of NFTs
     pub symbol: String,
-    /// royalty percentage can be received
-    pub royalty_percentage: Option<u64>,
-    /// royalty addresses
-    pub royalty_payment_address: Option<String>,
+    /// We want make rich metadata, so we add metadata config
+    pub extension: Extension,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]

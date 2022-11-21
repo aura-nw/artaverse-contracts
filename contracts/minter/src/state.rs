@@ -4,6 +4,8 @@ use serde::{Deserialize, Serialize};
 use cosmwasm_std::Addr;
 use cw_storage_plus::{Item, Map};
 
+use crate::Extension;
+
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
 pub struct Config {
     pub owner: Addr,
@@ -15,8 +17,7 @@ pub struct Config {
     pub cw721_address: Option<Addr>,
     pub name: String,
     pub symbol: String,
-    pub royalty_percentage: Option<u64>,
-    pub royalty_payment_address: Option<String>,
+    pub extension: Extension
 }
 
 pub const CONFIG: Item<Config> = Item::new("config");

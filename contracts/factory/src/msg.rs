@@ -1,3 +1,4 @@
+use minter::Extension;
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
@@ -44,6 +45,5 @@ pub struct CreateMinterInstantiateMsg {
     pub max_tokens_per_batch_transfer: u32,
     pub name: String,
     pub symbol: String,
-    pub royalty_percentage: Option<u64>,
-    pub royalty_payment_address: Option<String>,
+    pub extension: Extension
 }

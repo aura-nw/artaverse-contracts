@@ -86,8 +86,7 @@ pub fn instantiate(
         max_tokens: msg.num_tokens,
         max_tokens_per_batch_mint: msg.max_tokens_per_batch_mint,
         max_tokens_per_batch_transfer: msg.max_tokens_per_batch_transfer,
-        royalty_percentage: msg.royalty_percentage,
-        royalty_payment_address: msg.royalty_payment_address,
+        extension: msg.extension.clone()
     };
     CONFIG.save(deps.storage, &config)?;
     MINTABLE_NUM_TOKENS.save(deps.storage, &msg.num_tokens)?;
@@ -218,11 +217,7 @@ fn query_config(deps: Deps) -> StdResult<ConfigResponse> {
         name: config.name,
         symbol: config.symbol,
         base_token_uri: config.base_token_uri,
-        extension: Some(Metadata {
-            royalty_percentage: config.royalty_percentage,
-            royalty_payment_address: config.royalty_payment_address,
-            ..Metadata::default()
-        }),
+        extension: config.extension
     })
 }
 
@@ -351,8 +346,6 @@ fn _create_cw721_mint<'a>(
             mintable_token_id.clone()
         )),
         extension: Some(Metadata {
-            royalty_percentage: config.royalty_percentage,
-            royalty_payment_address: config.royalty_payment_address.clone(),
             ..Metadata::default()
         }),
     });
@@ -443,14 +436,20 @@ fn _execute_batch_transfer_nft(
 pub fn query_royalties_info(deps: Deps, sale_price: Uint128) -> StdResult<RoyaltiesInfoResponse> {
     let config = CONFIG.load(deps.storage)?;
 
-    let royalty_percentage = match config.royalty_percentage {
-        Some(ref percentage) => Decimal::percent(*percentage),
+    let royalty_percentage = match config.extension {
+        Some(ref ext) => match ext.royalty_percentage {
+            Some(percentage) => Decimal::percent(percentage),
+            None => Decimal::percent(0),
+        },
         None => Decimal::percent(0),
     };
     let royalty_from_sale_price = sale_price * royalty_percentage;
 
-    let royalty_address = match config.royalty_payment_address {
-        Some(addr) => addr,
+    let royalty_address = match config.extension {
+        Some(ext) => match ext.royalty_payment_address {
+            Some(addr) => addr,
+            None => String::from(""),
+        },
         None => String::from(""),
     };
 

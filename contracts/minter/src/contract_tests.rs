@@ -44,8 +44,13 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
-            royalty_percentage: None,
-            royalty_payment_address: None,
+            extension: Some(Metadata {
+                description: Some("Spaceship with Warp Drive".into()),
+                name: Some("Starship USS Enterprise".to_string()),
+                royalty_payment_address: Some("jeanluc".to_string()),
+                royalty_percentage: Some(10),
+                ..Metadata::default()
+            }),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -65,8 +70,13 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
-            royalty_percentage: None,
-            royalty_payment_address: None,
+            extension: Some(Metadata {
+                description: Some("Spaceship with Warp Drive".into()),
+                name: Some("Starship USS Enterprise".to_string()),
+                royalty_payment_address: Some("jeanluc".to_string()),
+                royalty_percentage: Some(10),
+                ..Metadata::default()
+            }),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -86,8 +96,13 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
-            royalty_percentage: None,
-            royalty_payment_address: None,
+            extension: Some(Metadata {
+                description: Some("Spaceship with Warp Drive".into()),
+                name: Some("Starship USS Enterprise".to_string()),
+                royalty_payment_address: Some("jeanluc".to_string()),
+                royalty_percentage: Some(10),
+                ..Metadata::default()
+            }),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -107,8 +122,13 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
-            royalty_percentage: None,
-            royalty_payment_address: None,
+            extension: Some(Metadata {
+                description: Some("Spaceship with Warp Drive".into()),
+                name: Some("Starship USS Enterprise".to_string()),
+                royalty_payment_address: Some("jeanluc".to_string()),
+                royalty_percentage: Some(10),
+                ..Metadata::default()
+            }),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -128,8 +148,13 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
-            royalty_percentage: None,
-            royalty_payment_address: None,
+            extension: Some(Metadata {
+                description: Some("Spaceship with Warp Drive".into()),
+                name: Some("Starship USS Enterprise".to_string()),
+                royalty_payment_address: Some("jeanluc".to_string()),
+                royalty_percentage: Some(10),
+                ..Metadata::default()
+            }),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -149,8 +174,13 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
-            royalty_percentage: None,
-            royalty_payment_address: None,
+            extension: Some(Metadata {
+                description: Some("Spaceship with Warp Drive".into()),
+                name: Some("Starship USS Enterprise".to_string()),
+                royalty_payment_address: Some("jeanluc".to_string()),
+                royalty_percentage: Some(10),
+                ..Metadata::default()
+            }),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -185,8 +215,13 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
-            royalty_percentage: Option::from(10u64),
-            royalty_payment_address: Option::from(String::from("creator_address")),
+            extension: Some(Metadata {
+                description: Some("Spaceship with Warp Drive".into()),
+                name: Some("Starship USS Enterprise".to_string()),
+                royalty_payment_address: Some("jeanluc".to_string()),
+                royalty_percentage: Some(10),
+                ..Metadata::default()
+            }),
         };
 
         // we can just call .unwrap() to assert this was a success
@@ -275,8 +310,13 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSE"),
             symbol: String::from("ATA"),
-            royalty_percentage: Option::from(10u64),
-            royalty_payment_address: Option::from(String::from("creator_address")),
+            extension: Some(Metadata {
+                description: Some("Spaceship with Warp Drive".into()),
+                name: Some("Starship USS Enterprise".to_string()),
+                royalty_payment_address: Some("jeanluc".to_string()),
+                royalty_percentage: Some(10),
+                ..Metadata::default()
+            }),
         };
         // we can just call .unwrap() to assert this was a success
         let res = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone());
