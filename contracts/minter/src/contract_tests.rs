@@ -46,6 +46,8 @@ mod tests {
             symbol: String::from("ATA"),
             royalty_percentage: None,
             royalty_payment_address: None,
+            image: Some(("ipfs://").to_string()),
+            animation_url: Some(("ipfs://").to_string()),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -67,6 +69,8 @@ mod tests {
             symbol: String::from("ATA"),
             royalty_percentage: None,
             royalty_payment_address: None,
+            image: Some(("ipfs://").to_string()),
+            animation_url: Some(("ipfs://").to_string()),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -88,6 +92,8 @@ mod tests {
             symbol: String::from("ATA"),
             royalty_percentage: None,
             royalty_payment_address: None,
+            image: Some(("ipfs://").to_string()),
+            animation_url: Some(("ipfs://").to_string()),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -109,6 +115,8 @@ mod tests {
             symbol: String::from("ATA"),
             royalty_percentage: None,
             royalty_payment_address: None,
+            image: Some(("ipfs://").to_string()),
+            animation_url: Some(("ipfs://").to_string()),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -130,6 +138,8 @@ mod tests {
             symbol: String::from("ATA"),
             royalty_percentage: None,
             royalty_payment_address: None,
+            image: Some(("ipfs://").to_string()),
+            animation_url: Some(("ipfs://").to_string()),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -151,6 +161,8 @@ mod tests {
             symbol: String::from("ATA"),
             royalty_percentage: None,
             royalty_payment_address: None,
+            image: Some(("ipfs://").to_string()),
+            animation_url: Some(("ipfs://").to_string()),
         };
         let err = instantiate(deps.as_mut(), mock_env(), info.clone(), msg.clone()).unwrap_err();
         assert_eq!(
@@ -187,6 +199,8 @@ mod tests {
             symbol: String::from("ATA"),
             royalty_percentage: Option::from(10u64),
             royalty_payment_address: Option::from(String::from("creator_address")),
+            image: Some(("ipfs://").to_string()),
+            animation_url: Some(("ipfs://").to_string()),
         };
 
         // we can just call .unwrap() to assert this was a success
@@ -231,14 +245,14 @@ mod tests {
                     "ipfs://Sdjbfsdkjfgbdkfjgbdsfgbkiufbguydfguybfsdfjkdnsk"
                 ),
                 extension: Some(Metadata {
-                    image: None,
+                    image: Some(("ipfs://").to_string()),
                     image_data: None,
                     external_url: None,
                     description: None,
                     name: None,
                     attributes: None,
                     background_color: None,
-                    animation_url: None,
+                    animation_url: Some(("ipfs://").to_string()),
                     youtube_url: None,
                     royalty_percentage: Some(10),
                     royalty_payment_address: Some(String::from("creator_address")),

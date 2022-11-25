@@ -26,6 +26,10 @@ pub struct InstantiateMsg {
     pub royalty_percentage: Option<u64>,
     /// royalty addresses
     pub royalty_payment_address: Option<String>,
+    /// Metadata image
+    pub image: Option<String>,
+    /// Metadata animation url
+    pub animation_url: Option<String>,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]

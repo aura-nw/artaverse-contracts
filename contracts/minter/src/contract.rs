@@ -88,6 +88,8 @@ pub fn instantiate(
         max_tokens_per_batch_transfer: msg.max_tokens_per_batch_transfer,
         royalty_percentage: msg.royalty_percentage,
         royalty_payment_address: msg.royalty_payment_address,
+        image: msg.image,
+        animation_url: msg.animation_url,
     };
     CONFIG.save(deps.storage, &config)?;
     MINTABLE_NUM_TOKENS.save(deps.storage, &msg.num_tokens)?;
@@ -221,6 +223,8 @@ fn query_config(deps: Deps) -> StdResult<ConfigResponse> {
         extension: Some(Metadata {
             royalty_percentage: config.royalty_percentage,
             royalty_payment_address: config.royalty_payment_address,
+            image: config.image,
+            animation_url: config.animation_url,
             ..Metadata::default()
         }),
     })
@@ -353,6 +357,8 @@ fn _create_cw721_mint<'a>(
         extension: Some(Metadata {
             royalty_percentage: config.royalty_percentage,
             royalty_payment_address: config.royalty_payment_address.clone(),
+            image: config.image.clone(),
+            animation_url: config.animation_url.clone(),
             ..Metadata::default()
         }),
     });

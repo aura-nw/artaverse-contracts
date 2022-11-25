@@ -17,6 +17,8 @@ pub struct Config {
     pub symbol: String,
     pub royalty_percentage: Option<u64>,
     pub royalty_payment_address: Option<String>,
+    pub image: Option<String>,
+    pub animation_url: Option<String>,
 }
 
 pub const CONFIG: Item<Config> = Item::new("config");

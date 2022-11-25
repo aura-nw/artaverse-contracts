@@ -118,6 +118,8 @@ fn _execute_create_minter(
                 royalty_percentage: minter_instantiate_msg.royalty_percentage,
                 royalty_payment_address: minter_instantiate_msg.royalty_payment_address,
                 num_tokens: minter_instantiate_msg.num_tokens,
+                image: minter_instantiate_msg.image,
+                animation_url: minter_instantiate_msg.animation_url,
                 cw721_code_id,
             })?,
             funds: vec![],
