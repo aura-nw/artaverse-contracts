@@ -1,0 +1,2 @@
+fc69364afac250d41d2e131f5decef86f92bbe28f0d4f8641612ea346ee020cc  target/wasm32-unknown-unknown/release/factory.wasm
+22d6b5d47dc9598e5d2851a7c7c8d694fd0576b404ddadbc7b17bc9d1fc14756  target/wasm32-unknown-unknown/release/minter.wasm

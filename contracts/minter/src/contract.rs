@@ -82,6 +82,8 @@ pub fn instantiate(
         cw721_address: None,
         name: msg.name.clone(),
         symbol: msg.symbol.clone(),
+        image: msg.image.clone(),
+        animation_url: msg.animation_url.clone(),
         base_token_uri: msg.base_token_uri.clone(),
         max_tokens: msg.num_tokens,
         max_tokens_per_batch_mint: msg.max_tokens_per_batch_mint,
@@ -219,6 +221,8 @@ fn query_config(deps: Deps) -> StdResult<ConfigResponse> {
         symbol: config.symbol,
         base_token_uri: config.base_token_uri,
         extension: Some(Metadata {
+            image: Some(config.image.into()),
+            animation_url: Some(config.animation_url.into()),
             royalty_percentage: config.royalty_percentage,
             royalty_payment_address: config.royalty_payment_address,
             ..Metadata::default()

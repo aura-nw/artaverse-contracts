@@ -44,6 +44,8 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
+            image: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
+            animation_url: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
             royalty_percentage: None,
             royalty_payment_address: None,
         };
@@ -65,6 +67,8 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
+            image: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
+            animation_url: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
             royalty_percentage: None,
             royalty_payment_address: None,
         };
@@ -86,6 +90,8 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
+            image: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
+            animation_url: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
             royalty_percentage: None,
             royalty_payment_address: None,
         };
@@ -107,6 +113,8 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
+            image: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
+            animation_url: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
             royalty_percentage: None,
             royalty_payment_address: None,
         };
@@ -128,6 +136,8 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
+            image: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
+            animation_url: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
             royalty_percentage: None,
             royalty_payment_address: None,
         };
@@ -149,6 +159,8 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
+            image: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
+            animation_url: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
             royalty_percentage: None,
             royalty_payment_address: None,
         };
@@ -185,6 +197,8 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSER"),
             symbol: String::from("ATA"),
+            image: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
+            animation_url: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
             royalty_percentage: Option::from(10u64),
             royalty_payment_address: Option::from(String::from("creator_address")),
         };
@@ -231,14 +245,14 @@ mod tests {
                     "ipfs://Sdjbfsdkjfgbdkfjgbdsfgbkiufbguydfguybfsdfjkdnsk"
                 ),
                 extension: Some(Metadata {
-                    image: None,
+                    image: Some(String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg")),
                     image_data: None,
                     external_url: None,
                     description: None,
                     name: None,
                     attributes: None,
                     background_color: None,
-                    animation_url: None,
+                    animation_url: Some(String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg")),
                     youtube_url: None,
                     royalty_percentage: Some(10),
                     royalty_payment_address: Some(String::from("creator_address")),
@@ -275,6 +289,8 @@ mod tests {
             cw721_code_id: 10u64,
             name: String::from("ARTAVERSE"),
             symbol: String::from("ATA"),
+            image: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
+            animation_url: String::from("ipfs://Fhgihgkdfhgdfgdgdfgdfhfvbnykorkjojroiwoiwmgdmg"),
             royalty_percentage: Option::from(10u64),
             royalty_payment_address: Option::from(String::from("creator_address")),
         };

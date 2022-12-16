@@ -22,6 +22,10 @@ pub struct InstantiateMsg {
     pub name: String,
     /// symbol of NFTs
     pub symbol: String,
+    /// image URL 
+    pub image: String,
+    /// animation URL
+    pub animation_url: String,
     /// royalty percentage can be received
     pub royalty_percentage: Option<u64>,
     /// royalty addresses

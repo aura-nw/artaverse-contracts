@@ -113,6 +113,8 @@ fn _execute_create_minter(
                 name: minter_instantiate_msg.name,
                 symbol: minter_instantiate_msg.symbol,
                 base_token_uri: minter_instantiate_msg.base_token_uri,
+                image: minter_instantiate_msg.image,
+                animation_url: minter_instantiate_msg.animation_url,
                 max_tokens_per_batch_mint: minter_instantiate_msg.max_tokens_per_batch_mint,
                 max_tokens_per_batch_transfer: minter_instantiate_msg.max_tokens_per_batch_transfer,
                 royalty_percentage: minter_instantiate_msg.royalty_percentage,

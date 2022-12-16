@@ -1,0 +1,34 @@
+{
+  "serenity": {
+    "minter": {
+      "code_id": 847,
+      "addresses": {},
+      "proposal": {
+        "store_code": null
+      }
+    },
+    "factory": {
+      "code_id": 848,
+      "addresses": {},
+      "proposal": {
+        "store_code": null
+      }
+    }
+  },
+  "euphoria": {
+    "minter": {
+      "code_id": 360,
+      "addresses": {},
+      "proposal": {
+        "store_code": null
+      }
+    },
+    "factory": {
+      "code_id": 361,
+      "addresses": {},
+      "proposal": {
+        "store_code": null
+      }
+    }
+  }
+}
