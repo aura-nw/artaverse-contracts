@@ -221,8 +221,8 @@ fn query_config(deps: Deps) -> StdResult<ConfigResponse> {
         symbol: config.symbol,
         base_token_uri: config.base_token_uri,
         extension: Some(Metadata {
-            image: Some(config.image.into()),
-            animation_url: Some(config.animation_url.into()),
+            image: Some(config.image.into()).clone(),
+            animation_url: Some(config.animation_url.into()).clone(),
             royalty_percentage: config.royalty_percentage,
             royalty_payment_address: config.royalty_payment_address,
             ..Metadata::default()
@@ -355,6 +355,8 @@ fn _create_cw721_mint<'a>(
             mintable_token_id.clone()
         )),
         extension: Some(Metadata {
+            image: Some(config.image.clone()),
+            animation_url: Some(config.animation_url.clone()),
             royalty_percentage: config.royalty_percentage,
             royalty_payment_address: config.royalty_payment_address.clone(),
             ..Metadata::default()

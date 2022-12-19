@@ -17,14 +17,14 @@
   },
   "euphoria": {
     "minter": {
-      "code_id": 360,
+      "code_id": 362,
       "addresses": {},
       "proposal": {
         "store_code": null
       }
     },
     "factory": {
-      "code_id": 361,
+      "code_id": 363,
       "addresses": {},
       "proposal": {
         "store_code": null
