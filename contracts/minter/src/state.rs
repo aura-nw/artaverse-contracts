@@ -15,8 +15,9 @@ pub struct Config {
     pub cw721_address: Option<Addr>,
     pub name: String,
     pub symbol: String,
-    pub image: String,
-    pub animation_url: String,
+    pub image: Option<String>,
+    pub animation_url: Option<String>,
+    pub description: Option<String>,
     pub royalty_percentage: Option<u64>,
     pub royalty_payment_address: Option<String>,
 }

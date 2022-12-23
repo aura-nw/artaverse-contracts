@@ -82,8 +82,9 @@ pub fn instantiate(
         cw721_address: None,
         name: msg.name.clone(),
         symbol: msg.symbol.clone(),
-        image: msg.image.clone(),
-        animation_url: msg.animation_url.clone(),
+        image: msg.image,
+        animation_url: msg.animation_url,
+        description: msg.descriptions,
         base_token_uri: msg.base_token_uri.clone(),
         max_tokens: msg.num_tokens,
         max_tokens_per_batch_mint: msg.max_tokens_per_batch_mint,
@@ -219,10 +220,11 @@ fn query_config(deps: Deps) -> StdResult<ConfigResponse> {
         max_tokens_per_batch_transfer: config.max_tokens_per_batch_transfer,
         name: config.name,
         symbol: config.symbol,
-        base_token_uri: config.base_token_uri,
+        base_token_uri: String::from(""),
         extension: Some(Metadata {
-            image: Some(config.image.into()).clone(),
-            animation_url: Some(config.animation_url.into()).clone(),
+            image: config.image.clone(),
+            animation_url: config.animation_url.clone(),
+            description: config.description.clone(),
             royalty_percentage: config.royalty_percentage,
             royalty_payment_address: config.royalty_payment_address,
             ..Metadata::default()
@@ -349,16 +351,13 @@ fn _create_cw721_mint<'a>(
     let mint_msg = Cw721ExecuteMsg::Mint(MintMsg::<Extension> {
         token_id: mintable_token_id.to_string(),
         owner: recipient_addr.to_string(),
-        token_uri: Some(format!(
-            "{}/{}",
-            config.base_token_uri,
-            mintable_token_id.clone()
-        )),
+        token_uri: Some("".to_string()),
         extension: Some(Metadata {
-            image: Some(config.image.clone()),
-            animation_url: Some(config.animation_url.clone()),
+            image: config.image.clone(),
+            animation_url: config.animation_url.clone(),
             royalty_percentage: config.royalty_percentage,
             royalty_payment_address: config.royalty_payment_address.clone(),
+            description: config.description.clone(),
             ..Metadata::default()
         }),
     });

@@ -1,2 +1,2 @@
-fc69364afac250d41d2e131f5decef86f92bbe28f0d4f8641612ea346ee020cc  target/wasm32-unknown-unknown/release/factory.wasm
-6f73a7911ef809aa11adaa73b2186a7f228d3fabb0cee6a2aec88923b881b871  target/wasm32-unknown-unknown/release/minter.wasm
+68ee1ecd3fdb0bdce8d1100b528d77277e305f6f26df34781df08ac62eb62ba2  target/wasm32-unknown-unknown/release/factory.wasm
+130f49a4fb02ae0cf8e4421a0d667442fde14b0d73349d2709f008d97f3da49e  target/wasm32-unknown-unknown/release/minter.wasm

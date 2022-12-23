@@ -13,3 +13,7 @@
 # IDEs
 *.iml
 .idea
+
+# Beaker
+Beaker.toml
+.beaker
