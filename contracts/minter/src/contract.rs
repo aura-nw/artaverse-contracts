@@ -351,7 +351,7 @@ fn _create_cw721_mint<'a>(
     let mint_msg = Cw721ExecuteMsg::Mint(MintMsg::<Extension> {
         token_id: mintable_token_id.to_string(),
         owner: recipient_addr.to_string(),
-        token_uri: Some("".to_string()),
+        token_uri: None,
         extension: Some(Metadata {
             image: config.image.clone(),
             animation_url: config.animation_url.clone(),
