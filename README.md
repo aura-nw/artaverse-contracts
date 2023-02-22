@@ -1,5 +1,8 @@
 # Artaverse Contract
 
+*This contract is inspired as well as inherits a part of the Stargaze NFT [launchpad](https://github.com/public-awesome/launchpad) code.*
+
+
 Artaverse contract is written for the artaverse project, the contract serves to create and manage NFTs. The set includes contracts:
 
 * [Minter](contracts/minter): Minter Contract Customize CW721 according to the logic of the Artaverse project. It manages the config related to NFT
